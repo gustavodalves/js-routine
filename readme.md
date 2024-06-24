@@ -12,8 +12,6 @@ npm install js-routine-concurrency
 
 (FIFO) order.
 
-- **WaitGroup**: The `WaitGroup` class is used to wait for a collection of tasks to complete. It has methods to add tasks, mark tasks as done, and wait for all tasks to complete.
-
 - **Handler Interface**: The `Handler` interface defines a `handle` method that takes an input of type `T` and returns a `Promise<void>`. This method is implemented by the user to define the task logic.
 
 - **WorkerPool Class**:
