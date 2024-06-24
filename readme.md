@@ -10,8 +10,6 @@ You can install `js-routine-concurrency` via npm:
 npm install js-routine-concurrency
 ```
 
-(FIFO) order.
-
 - **Handler Interface**: The `Handler` interface defines a `handle` method that takes an input of type `T` and returns a `Promise<void>`. This method is implemented by the user to define the task logic.
 
 - **WorkerPool Class**:
