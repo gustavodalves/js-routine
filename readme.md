@@ -2,6 +2,14 @@
 
 `js-routine-concurrency` is a JavaScript library that provides utilities for handling concurrent tasks efficiently. This package includes a `WorkerPool` class that allows you to manage and run tasks with a specified number of concurrent workers.
 
+## Installation
+
+You can install `js-routine-concurrency` via npm:
+
+```sh
+npm install js-routine-concurrency
+```
+
 (FIFO) order.
 
 - **WaitGroup**: The `WaitGroup` class is used to wait for a collection of tasks to complete. It has methods to add tasks, mark tasks as done, and wait for all tasks to complete.
