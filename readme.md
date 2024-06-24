@@ -19,8 +19,8 @@
 
 ```javascript
 // Define a handler for the tasks
-class MyHandler {
-  async handle(task) {
+class MyHandler implements Handler<string> {
+  async handle(task: string) {
     // Implement your task processing logic here
     console.log(`Processing task: ${task}`);
     await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate async work
@@ -40,18 +40,7 @@ for (let i = 0; i < 10; i++) {
 workerPool.wait().then(() => {
   console.log('All tasks completed');
 });
-
-### Explanation
-
-1. **Queue**: The `taskQueue` is a queue where tasks are stored before being processed. Each task is a function returning a `Promise<void>`.
-
-2. **WaitGroup**: The `WaitGroup` ensures that the `wait()` method only resolves when all tasks have been processed.
-
-3. **Enqueueing Tasks**: The `enqueue` method adds a task to the queue and triggers task execution. It also increments the wait group counter.
-
-4. **Running Tasks**: The `runTask` method handles the logic of executing tasks. It checks if there are available workers and dequeues a task if possible. It also decrements the wait group counter when a task is done.
-
-5. **Concurrency Control**: The `WorkerPool` controls the number of concurrent tasks through the `workerCount` variable, ensuring no more than the specified number of workers are active at any time.
+```
 
 This `README.md` file provides a comprehensive overview of how to use the `js-routine-concurrency` package, including installation, usage, and a detailed explanation of how the `WorkerPool` class works.
 
